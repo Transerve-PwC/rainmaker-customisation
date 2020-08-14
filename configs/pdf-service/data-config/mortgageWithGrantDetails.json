@@ -1,0 +1,28 @@
+{
+    "key":"mortgageWithGrantDetails",
+    "DataConfigs": {
+       "serviceName": "rainmaker-rp",
+       "version": "1.0.0",
+       "baseKeyPath": "$",
+       "entityIdPath":"$.applicationNumber",
+       "isCommonTableBorderRequired":true,
+       "mappings": [
+          {
+             "mappings": [
+                {
+                   "direct": [
+                      {
+                         "variable": "variable1",
+                         "value": {
+                              "path":"$..mgApplicationDetail[0].name"                              
+                         }
+                      }             
+                     
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+ }
+ 

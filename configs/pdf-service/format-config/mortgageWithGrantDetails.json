@@ -1,0 +1,401 @@
+{
+    "key":"mortgageWithGrantDetails",
+    "config":{
+      
+    "content":[
+      {
+        "text": "MUNICIPAL CORPORATION CHANDIGARH",
+        "alignment": "center",
+        "color": "#484848",
+        "fontSize": 14,
+        "lineHeight":"2"
+      },
+      {
+        "text": "Application for Mortgage",
+        "alignment": "center",
+        "color": "#484848",
+        "fontSize": 12,         
+        "lineHeight":"2"
+      },
+      {
+        "text": "Application No. CH-RP-2020-07-20-000322",
+        "alignment": "center",
+        "color": "#484848",
+        "fontSize": 12,
+        "lineHeight":"2"
+      }, 
+      {
+          "columns":[
+            {
+              "text": "MUNICIPAL",
+              "alignment": "left",
+              "color": "#484848",
+              "fontSize": 14,
+              "lineHeight":"2"
+            },
+            {
+              "text": "MUNICIPAL CORPORATION CHANDIGARH",
+              "alignment": "center",
+              "color": "#484848",
+              "fontSize": 14,
+              "lineHeight":"2"
+            }
+          ]
+         
+        },
+        {
+          "columns":[
+           
+            {
+              "text": "Application for Mortgage",
+              "alignment": "center",
+              "color": "#484848",
+              "fontSize": 12,         
+              "lineHeight":"2"
+            }
+          
+          ]
+         
+        },
+        {
+          "columns":[
+            {
+              "text": "Application No. CH-RP-2020-07-20-000322",
+              "alignment": "center",
+              "color": "#484848",
+              "fontSize": 12,
+              "lineHeight":"2"
+            }
+             
+          ]
+         
+        },
+     
+     
+     {
+      "style":"table-style",
+      "table": {
+        "widths": ["33.33%", "33.33%", "33.33%"],
+        "heights": [20, 70, 70,70,70],
+				"body": [
+          [{ "text": "", "colSpan": 3, "alignment": "center" }, {}, {}],
+          [{
+            "colSpan": 3,
+            "columns": [
+              
+              [
+                {
+                  "text":"Property Details",
+                  "fontSize": 12,
+                  "lineHeight": 2
+                },
+                {
+                  "columns": [
+                    { "text":" Transit Site/Plot number",
+                      "lineHeight": 2,
+
+                      "fontSize": 8 },
+                    { "text":"Allotment Number ",
+                      "lineHeight": 2,
+                      "fontSize": 8 },
+                    { "text": "Area ",
+                      "lineHeight": 2,
+                      "fontSize": 8 }
+                  ]
+                },
+                {
+                    "columns": [
+                      { "text":"CH/RP/53-2020-07-20-000322",
+                        "lineHeight": 2,
+                        "fontSize": 8, 
+                      "bold":true},
+                      { "text":"CH-RP-00566 ",
+                        "lineHeight": 2,
+                        "fontSize": 8, 
+                        "bold":true
+                       },
+                      { "text": "Patto Plaza",
+                        "lineHeight": 2,
+                        "fontSize": 8, 
+                        "bold":true }
+                    ]
+                
+                },
+                {
+                  "columns": [
+                    { "text":"Pincode",
+                      "fontSize": 8 }
+                  ]   
+                },
+                {
+                  "columns": [
+                    { "text":"403401",
+                      "fontSize": 8,
+                      "bold":true  }
+                  ]   
+                }
+              ]
+            ]
+          },{},{}],
+          [{
+            "colSpan": 3,
+            "columns": [
+              
+              [
+                {
+                  "text":"Applicant Details",
+                  "fontSize": 12
+                },
+                {
+                  "columns": [
+                    { "text":" Applicant Name ",
+                      "fontSize": 8 },
+                    { "text":"Father/ Husbands Name * ",
+                      "fontSize": 8 },
+                    { "text": "Relationship ",
+                      "fontSize": 8 },
+                    {"text":"Mobile No.",
+                      "fontSize": 8}
+                  ]
+                },
+                {
+                    "columns": [
+                      { "text":"Pankaj Sharma ",
+                        "fontSize": 8, 
+                        "bold":true },
+                      { "text":"Vikas Sharma ",
+                        "fontSize": 8, 
+                        "bold":true },
+                      { "text": "Father " ,
+                        "fontSize": 8, 
+                        "bold":true},
+                      {"text":"9494949449",
+                        "fontSize": 8, 
+                        "bold":true}
+                    ]
+                
+                },
+                {
+                  "columns": [
+                    { "text":"Email " ,
+                      "fontSize": 8},
+                    {"text":"Aadhar Number",
+                      "fontSize": 8}
+                  ]   
+                },
+                {
+                  "columns": [
+                    { "text":"gmail.com" ,
+                      "fontSize": 8, 
+                      "bold":true},
+                    { "text":"12356" ,
+                      "fontSize": 8, 
+                      "bold":true}
+                  ]   
+                }
+              ]
+            ]
+          },{},{}],
+         
+          [{
+            "colSpan": 3,
+            "columns": [
+              
+              [
+                {
+                  "text":"Grant Details",
+                  "fontSize": 12
+                },
+                {
+                  "columns": [
+                    { "text":" Name of the Bank ",
+                      "fontSize": 8 },
+                    { "text":"Enter mortgage amount " ,
+                      "fontSize": 8},
+                    { "text": "Sanction letter number" ,
+                      "fontSize": 8}
+                  ]
+                },
+                {
+                    "columns": [
+                      { "text":"SBI Punjab Branch ",
+                        "fontSize": 8, 
+                        "bold":true },
+                      { "text":"250000 ",
+                        "fontSize": 8, 
+                        "bold":true },
+                      { "text": "12sss/45A" ,
+                        "fontSize": 8, 
+                        "bold":true}
+                    ]
+                
+                },
+                {
+                  "columns": [
+                    { "text":"Mortgage end date",
+                      "fontSize": 8 },
+                    {"text":"Date of sanctioning",
+                      "fontSize": 8},
+                    {"text":""}
+                  ]   
+                },
+                {
+                  "columns": [
+                    { "text":"25-12-2025 ",
+                      "fontSize": 8, 
+                      "bold":true },
+                    {"text":"10-08-201",
+                      "fontSize": 8, 
+                      "bold":true},
+                    {"text":""}
+                  ]   
+                }
+              ]
+            ]
+          },{},{}],
+          [{
+            "colSpan": 3,
+            "columns": [
+              
+              [
+                {
+                  "text":"Documents",
+                  "fontSize": 12
+                },
+                {
+                  "columns": [
+                    { "text":" Form B " ,
+                      "fontSize": 8},
+                    { "text":"Form C " ,
+                      "fontSize": 8},
+                    { "text": "Form A" ,
+                      "fontSize": 8}
+                  ]
+                },
+                {
+                    "columns": [
+                      { "text":"RP_ certificate01.pdf ",
+                        "fontSize": 8, 
+                        "bold":true },
+                      { "text":"RP_ certificate01.pdf " ,
+                        "fontSize": 8, 
+                        "bold":true},
+                      { "text":"RP_ certificate01.pdf" ,
+                        "fontSize": 8, 
+                        "bold":true}
+                      
+                    ]
+                
+                },
+                {
+                  "columns": [
+                    { "text":" Form D " ,
+                      "fontSize": 8},
+                    { "text":"Form E" ,
+                      "fontSize": 8},
+                    { "text": "Form F" ,
+                      "fontSize": 8}
+                  ]
+                },
+                {
+                    "columns": [
+                      { "text":"RP_ certificate01.pdf " ,
+                        "fontSize": 8, 
+                        "bold":true},
+                      { "text":"RP_ certificate01.pdf " ,
+                        "fontSize": 8, 
+                        "bold":true},
+                      { "text":"RP_ certificate01.pdf",
+                        "fontSize": 8, 
+                        "bold":true}
+                    ]
+                
+                }
+              ]
+            ]
+          },{},{}]
+        ]
+			}
+     }
+      ],
+    "styles": {
+      "tableExample": {
+        "margin": [0, 5, 0, 15],
+        "width":["100%"]
+      },
+      "table-style":{
+        "lineHeight":"2"
+      },
+      "pt-reciept-citizen-subheader": {
+        "fontSize": 10,
+        "bold": true,
+        "margin": [
+          0,
+          16,
+          0,
+          8
+        ],
+        "color": "#484848"
+      },
+      "pt-reciept-citizen-table": {
+        "fontSize": 10,
+        "color": "#484848"
+      },
+      "receipt-assess-table": {
+        "fontSize": 10,
+        "color": "#484848",
+        "margin": [
+          0,
+          8,
+          0,
+          0
+        ]
+      },
+      "receipt-assess-table-header": {
+        "bold": true,
+        "fillColor": "#D8D8D8",
+        "color": "#484848"
+      },
+      "receipt-header-details": {
+        "fontSize": 9,
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "color": "#484848"
+      },
+      "receipt-table-key": {
+        "color": "#484848",
+        "bold": true
+      },
+      "receipt-table-value": {
+        "color": "#484848"
+      },
+      "receipt-logo-header": {
+        "color": "#484848",
+        "fontSize": 16,
+        "bold": true,
+        "decoration": "underline",
+        "decorationColor": "#484848"
+      },
+      "receipt-logo-sub-header": {
+        "color": "#484848",
+        "fontSize": 13,
+        "decoration": "underline",
+        "decorationColor": "#484848"
+      },
+      "receipt-footer": {
+        "color": "#484848",
+        "fontSize": 10,
+        "margin": [
+          0,
+          30,
+          0,
+          5
+        ]
+      }
+    }
+    }
+  }
