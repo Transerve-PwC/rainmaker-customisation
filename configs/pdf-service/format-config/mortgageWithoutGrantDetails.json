@@ -1,5 +1,5 @@
 {
-    "key":"mortgageWithGrantDetails",
+    "key":"mortgageWithoutGrantDetails",
     "config":{
       
     "content":[
@@ -183,63 +183,6 @@
                     { "text":"{{aadharno}}" ,
                       "fontSize": 8, 
                       "bold":true}
-                  ]   
-                }
-              ]
-            ]
-          },{},{}],
-         
-          [{
-            "colSpan": 3,
-            "columns": [
-              
-              [
-                {
-                  "text":"{{grantDetails}}",
-                  "fontSize": 12
-                },
-                {
-                  "columns": [
-                    { "text":"{{name_of_bank_label}} ",
-                      "fontSize": 8 },
-                    { "text":"{{enter_mortgage_amount_label}}" ,
-                      "fontSize": 8},
-                    { "text": "{{sanction_letter_number_label}}" ,
-                      "fontSize": 8}
-                  ]
-                },
-                {
-                    "columns": [
-                      { "text":"{{nameOfBank}}",
-                        "fontSize": 8, 
-                        "bold":true },
-                      { "text":"{{enterMortgageAmount}} ",
-                        "fontSize": 8, 
-                        "bold":true },
-                      { "text": "{{sanctionLetterNumber}}" ,
-                        "fontSize": 8, 
-                        "bold":true}
-                    ]
-                
-                },
-                {
-                  "columns": [
-                    { "text":"{{mortgage_end_date_label}}",
-                      "fontSize": 8 },
-                    {"text":"{{date_of_sanctioning_label}}",
-                      "fontSize": 8},
-                    {"text":""}
-                  ]   
-                },
-                {
-                  "columns": [
-                    { "text":"{{mortgageEndDate}}",
-                      "fontSize": 8, 
-                      "bold":true },
-                    {"text":"{{dateOfSanctioning}}",
-                      "fontSize": 8, 
-                      "bold":true},
-                    {"text":""}
                   ]   
                 }
               ]
