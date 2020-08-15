@@ -8,7 +8,7 @@
       {
           "columns":[
             {
-              "image": "src/fonts/mortageApplicationLogo.png",
+              "image": "{{logo}}",
               "width": 40,
               "alignment":"left"
             },
