@@ -1,7 +1,9 @@
 {
     "key":"mortgageWithoutGrantDetails",
     "config":{
-      
+      "defaultStyle": {
+        "font": "Cambay"
+       }, 
     "content":[
       {
           "columns":[
@@ -27,7 +29,8 @@
               "text": "{{application_for_mortgage}}",
               "alignment": "center",
               "fontSize": 12,         
-              "lineHeight":"2"            
+              "lineHeight":"2",
+              "italics":true            
             }         
           ]        
         },
