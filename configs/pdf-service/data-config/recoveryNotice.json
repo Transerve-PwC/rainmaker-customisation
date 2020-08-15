@@ -1,0 +1,102 @@
+{
+    "key": "recoveryNotice",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.violationNotices.*",
+      "entityIdPath":"$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "applicationNo",
+                  "value": {
+                    "path": "$.applicationNumber"
+                  }
+                },
+                {
+                  "variable": "municipal_co_chandigarh",
+                  "value": {
+                    "path": "VIOLATION_PDF_HEADER"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "prefix":"RP",   
+                     "module":"rainmaker-rp"
+                  } 
+                },
+                {
+                  "variable":"comments",
+                  "value":{
+                    "path":"$.description"
+                  }
+                },
+                {
+                    "variable":"notificationNo",
+                    "value":{
+                        "path":"$.notificationNo"
+                    }
+                },
+                {
+                    "variable":"date",
+                    "value":{
+                        "path":"$.date"
+                    }
+                },
+                {
+                  "variable": "colony_branch",
+                  "value": {
+                    "path": "COLONY_BRANCH_HEADER"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "prefix":"RP",   
+                     "module":"rainmaker-rp"
+                  } 
+                },
+                {
+                  "variable": "cause_notice",
+                  "value": {
+                    "path": "CAUSE_NOTICE_HEADER"
+                },
+                  "type": "label",
+                  "localisation":{
+                     "prefix":"RP",   
+                     "module":"rainmaker-rp"
+                  } 
+                }, 
+              {
+                "variable": "logo",                        
+                "url":"https://egov.transerve.com/media/logo.png",
+                "type":"image"
+              },
+             
+              {
+                  "variable":"transit_no",
+                  "value":{
+                      "path":"$.property.transitNumber"
+                  }
+              },
+              {
+                  "variable":"allotmentNumber",
+                  "value":{
+                      "path":"$.allotmentNumber"
+                  }
+              },
+              {
+                "variable":"notificationDate",
+                "value":{
+                    "path":"$.notificationDate"
+                }}
+              
+               
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
