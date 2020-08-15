@@ -17,17 +17,17 @@
                             "width":"*",
                             "stack": [
                                 {
-                                    "text": "Municipal Corporation Chandigarh",
+                                    "text": "{{municipal_co_chandigarh}}",
                                     "fontSize":12,
                                      "bold":true
                                 },
                                 {
-                                      "text": "(Colony Branch)",
+                                      "text": "{{colony_branch}}",
                                       "fontSize":12,
                                       "color":"#676A6B "
                                 },
                                 {
-                                    "text":"SHOW CAUSE NOTICE" ,
+                                    "text":"{{cause_notice}}" ,
                                     "fontSize":10,
                                     "bold":true,
                                     "width":"*",
@@ -255,31 +255,31 @@
                     "heights":[20,20,20,20,20,20,20],
                     "body":[
                         [{
-                            "text":"Site No",
+                            "text":"{{site_no}}",
                             "style":"tableHeader"
                         },
                     {
-                        "text":"Name of the Allottee",
+                        "text":"{{nameOfAllotee}}",
                         "style":"tableHeader"
                     },
                     {
-                        "text":"S/o D/o W/o",
+                        "text":"{{so_do_wo}}",
                         "style":"tableHeader"
                     },
                     {
-                        "text":"Name of the Occupier",
+                        "text":"{{nameOfOccupier}}",
                         "style":"tableHeader"
                     },
                     {
-                        "text":"Stories   ",
+                        "text":"{{stories}}",
                         "style":"tableHeader"
                     },
                     {
-                        "text":"Cantilever  ",
+                        "text":"{{cantilever}}  ",
                         "style":"tableHeader"
                     },
                     {
-                        "text":"Shop",
+                        "text":"{{Shop}}",
                         "style":"tableHeader"
                     }
                 ],
@@ -325,84 +325,32 @@
             }
            
             ]
+            },
+            {
+                "margin":[0,10,0,0],
+                "text":[{
+                    "text":"{{commentsHeader}} : ",
+                    "style":"noticeContent",
+                    "bold":true
+                },
+            {
+                "text":"{{comments}}",
+                "style":"noticeContent" 
+            }]
+                
             }
 
                        
            ],
            "styles": {
-            "noc-head": {
-                "margin": [
-                  -25,
-                  -30,
-                  0,
-                  1
-                ]
-              },
               "tableHeader":{
                 "fontSize":8,
                 "bold":true
               },
               "noticeContent":{
                 "fontSize":8
-              },
-              "receipt-logo-header": {
-                "color": "#484848",
-                "fontSize": 14,
-                "bold": true,
-                "letterSpacing": 0.74,
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  5
-                ]
-              },
-              "receipt-table-value-cont": {
-                "color": "#000000",
-                "bold": false,
-                "fontSize": 11,
-                "fontWeight": 400,
-                "margin": [
-                  3,
-                  0,
-                  0,
-                  0
-                ]
-              },
-              "noc-table2": {
-                "fontSize": 12,
-                "color": "#484848",
-                "margin": [
-                 -25,
-                 0,
-                 -25,
-                 0
-               ]
-              },
-              "receipt-table-value": {
-                "color": "#000000",
-                "bold": true,
-                "fontSize": 12,
-                "fontWeight": 500,
-                "margin": [
-                  5,
-                  5,
-                  0,
-                  0
-                ]
-              },
-              "receipt-table2": {
-                "color": "#000000",
-                "bold": true,
-                "fontSize": 12,
-                "fontWeight": 500,
-                "margin": [
-                  3,
-                  0,
-                  0,
-                  0
-                ]
               }
+            
            }
     }
 }
