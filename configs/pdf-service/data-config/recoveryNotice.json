@@ -35,6 +35,17 @@
                   }
                 },
                 {
+                  "variable": "commentsHeader",
+                  "value": {
+                    "path": "VIOLATION_COMMENTS_HEADER"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "prefix":"RP",   
+                     "module":"rainmaker-rp"
+                  } 
+                },
+                {
                     "variable":"notificationNo",
                     "value":{
                         "path":"$.notificationNo"

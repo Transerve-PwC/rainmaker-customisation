@@ -235,13 +235,28 @@
                 "style":"noticeContent",
                 "text":"in accordance with the terms and conditions of Allotment/Scheme i"
             }
-    ],
+           ],
                "margin":[0,20,0,0]
+            },
+            {
+                "margin":[0,10,0,20],
+                "text":[{
+                    "text":"{{commentsHeader}} : ",
+                    "style":"noticeContent",
+                    "bold":true
+                },
+            {
+                "text":"{{comments}}",
+                "style":"noticeContent" 
+            }],
+            "alignment":"left",
+             "lineHeight":3
+                
             },
         
             {
                 "alignment":"right",
-                "margin":[0,20,0,0],
+                "margin":[0,5,0,0],
                 "stack":[
                     {
                         "style":"noticeContent",
@@ -268,7 +283,7 @@
                 ]
             },
             {
-                "margin":[0,20,0,0],
+                "margin":[0,10,0,0],
                 "text":"Note: -",
                 "style":"noticeContent" ,
                 "bold":true
@@ -292,9 +307,7 @@
                 }
                
                 ]
-            }
-
-                       
+            }               
            ],
            "styles": {
               "tableHeader":{

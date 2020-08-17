@@ -95,6 +95,18 @@
                   } 
                 },
                 {
+                  "variable":"notificationNo",
+                  "value":{
+                      "path":"$.notificationNo"
+                  }
+              },
+              {
+                  "variable":"date",
+                  "value":{
+                      "path":"$.date"
+                  }
+              },
+                {
                   "variable": "Shop",
                   "value": {
                     "path": "VIOLATION_TABLE_COL7"
