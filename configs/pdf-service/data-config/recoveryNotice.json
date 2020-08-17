@@ -46,12 +46,6 @@
                     }
                 },
                 {
-                    "variable":"date",
-                    "value":{
-                        "path":"$.date"
-                    }
-                },
-                {
                   "variable": "colony_branch",
                   "value": {
                     "path": "COLONY_BRANCH_HEADER"

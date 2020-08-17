@@ -11,12 +11,7 @@
           "mappings": [
             {
               "direct": [
-                {
-                  "variable": "applicationNo",
-                  "value": {
-                    "path": "$.applicationNumber"
-                  }
-                },
+             
                 {
                   "variable": "municipal_co_chandigarh",
                   "value": {
@@ -100,12 +95,7 @@
                       "path":"$.notificationNo"
                   }
               },
-              {
-                  "variable":"date",
-                  "value":{
-                      "path":"$.date"
-                  }
-              },
+             
                 {
                   "variable": "Shop",
                   "value": {
@@ -168,12 +158,53 @@
                       "path":"$.property.transitNumber"
                   }
               },
+          
               {
-                  "variable":"allotmentNumber",
-                  "value":{
-                      "path":"$.allotmentNumber"
-                  }
-              },
+                "variable":"transit_no",
+                "value":{
+                    "path":"$.property.transitNumber"
+                }
+            },
+            {
+              "variable":"memoDate",
+              "value":{
+                "path":"$.memoDate"
+              }
+            },
+            {
+              "variable":"memoNumber",
+              "value":{"path":"$.memoNumber"}
+            },
+            {
+              "variable":"demandNoticeFrom",
+              "value":{
+                "path":"$.demandNoticeFrom"
+              }
+            },
+            {
+              "variable":"amount",
+              "value":{
+                "path":"$.amount"
+              }
+            },
+            
+            {
+              "variable":"demandNoticeTo",
+              "value":{
+                "path":"$.demandNoticeTo"
+              }
+            },
+            {
+              "variable":"demandNoticeFrom",
+              "value":{
+                  "path":"$.demandNoticeFrom"
+              }             
+            },
+            {
+              "variable":"notificationDate",
+              "value":{
+                  "path":"$.notificationDate"
+              }},
               {
                 "variable":"notificationDate",
                 "value":{

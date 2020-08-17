@@ -78,11 +78,11 @@
                 "margin":[0,10,0,0],
                 "stack": [
                     {
-                        "text": "Memo No. Addl.CMC-l/Supdt(C).",
+                        "text": "Memo No.{{memoNumber}}.",
                         "style":"noticeContent"
                     },
                     {
-                          "text": "Dated, Chandigarh the: {{date}}",
+                          "text": "Dated, Chandigarh the: {{memoDate}}",
                           "style":"noticeContent"         
                     }
                 ],
@@ -112,7 +112,7 @@
                         "style":"noticeContent"
                     },
 
-                    { "text":"license hold basis vide Allotment Letter No  {{allotmentNumber}} ALC dated {{date}}",
+                    { "text":"license hold basis vide Allotment Letter No  ---- ALC dated {{memoDate}}",
                         "style":"noticeContent"       
                         }
         
@@ -126,7 +126,7 @@
                 },
                     {"text":"the Chandigarh Administration to the Municipal Corporation, Chandigarh vide Notification No.",
                         "style":"noticeContent"},
-                    {"text":"{{notificationNo}}, dated {{notificationDate}} and the Additional Commissioner, Municipal",
+                    {"text":"------, dated {{demandNoticeTo}} and the Additional Commissioner, Municipal",
                         "style":"noticeContent"},
                     {"text":"Corporation, Chandigarh has been appointed as Estate Officer under the provision of Capital",
                         "style":"noticeContent"},
@@ -138,7 +138,7 @@
             {
                 "margin":[0,10,0,0],
                 "text":[{
-                    "text":"Notiﬁcation bearing No.{{notificationNo}} dated {{date}}.",
+                    "text":"Notiﬁcation bearing No.  dated .",
                     "style":"noticeContent"
                 }]
             },
