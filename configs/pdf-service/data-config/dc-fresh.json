@@ -3,7 +3,7 @@
     "DataConfigs": {
       "serviceName": "rainmaker-rp",
       "version": "1.0.0",
-      "baseKeyPath": "$.Owners.*",
+      "baseKeyPath": "$.DuplicateCopyApplications.*",
       "entityIdPath":"$.applicationNumber",
       "isCommonTableBorderRequired": true,
       "mappings": [
@@ -225,6 +225,18 @@
    }
   },
   {
+    "variable": "form_d_label",
+    "value": {
+      "path": "FORM_D_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+      "required":true,
+      "prefix": "RP",
+      "module":"rainmaker-tl"
+   }
+  },
+  {
     "variable": "form_f_label",
     "value": {
       "path": "FORM_F_LABEL"
@@ -236,19 +248,7 @@
       "module":"rainmaker-tl"
    }
   },
- 
-  {
-    "variable": "application_for_mortgage",
-    "value": {
-       "path": "APPLICATION_FOR_MORTGAGE_HEADER"
-    },
-    "type": "label",
-    "localisation":{
-       "required":true,
-       "prefix":"RP",   
-       "module":"rainmaker-tl"
-    } 
-  },
+
   {
     "variable": "application_for_duplicate_copy",
     "value": {
@@ -272,7 +272,73 @@
        "prefix":"RP",   
        "module":"rainmaker-tl"
     } 
+  },
+  {
+      "variable":"applicationNumber",
+      "value":{
+          "path":"$.applicationNumber"
+      }
+  },
+  {
+    "variable":"transitNumber",
+    "value":{
+        "path":"$.property.transitNumber"
+    }
+    
+  },
+  {
+    "variable":"area",
+    "value":{
+        "path":"$.property.area"
+    }
+  },
+  {
+    "variable":"pincode",
+    "value":{
+        "path":"$.property.pincode"
+    }
+    
+  },
+  {
+    "variable":"name",
+    "value":{
+        "path":"$.applicant[0].name"
+    }
+    
+  },
+  {
+    "variable":"guardian",
+    "value":{
+        "path":"$.applicant[0].guardian"
+    }
+    
+  },
+  {
+    "variable":"relationship",
+    "value":{
+        "path":"$.applicant[0].relationship"
+    } 
+  },
+  {
+    "variable":"phone",
+    "value":{
+        "path":"$.applicant[0].phone"
+    } 
+  },
+  {
+    "variable":"email",
+    "value":{
+        "path":"$.applicant[0].email"
+    } 
+  },
+  {
+    "variable":"adhaarNumber",
+    "value":{
+        "path":"$.applicant[0].adhaarNumber"
+    } 
   }
+  
+ 
  
             ]
             }
