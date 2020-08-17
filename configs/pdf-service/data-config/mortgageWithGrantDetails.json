@@ -1,7 +1,7 @@
 
 
  {
-   "key": "mortgageWithGrantDetails",
+   "key": "rp-mortgage-approved-alternate",
    "DataConfigs": {
      "serviceName": "rainmaker-rp",
      "version": "1.0.0",

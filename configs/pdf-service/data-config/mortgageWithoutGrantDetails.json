@@ -1,7 +1,7 @@
 
 
  {
-    "key": "mortgageWithoutGrantDetails",
+    "key": "rp-mortgage-fresh",
     "DataConfigs": {
       "serviceName": "rainmaker-rp",
       "version": "1.0.0",
