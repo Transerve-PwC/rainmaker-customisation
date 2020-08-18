@@ -257,6 +257,12 @@
    }
   },
   {
+    "variable": "documents_array",
+    "value": {
+      "path": "$.ownerDetails.ownershipTransferDocuments.*"
+    }
+  },
+  {
     "variable": "fresh_license_legal_heir",
     "value": {
        "path": "FRESH_LICENSE_LEGAL_HEIR_HEADER"
