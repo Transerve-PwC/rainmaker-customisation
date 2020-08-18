@@ -9,7 +9,17 @@
     "mappings": [{
       "mappings": [{
           "direct": [
-
+            {
+              "variable": "header",
+              "value": {
+                "path": "PDF_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
             {
               "variable": "property",
               "value": {
@@ -171,7 +181,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "TL_HOME_SEARCH_RESULTS",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -404,6 +414,12 @@
               }
             },
             {
+              "variable":"allotmentNumber",
+              "value":{
+                "path":"$.property.AllotmentNumber"
+              }
+            },
+            {
               "variable": "adhaarNumber",
               "value": {
                 "path": "$.applicant[0].adhaarNumber"
@@ -419,6 +435,12 @@
               "variable": "aproCharge",
               "value": {
                 "path": "$.applicant[0].aproCharge"
+              }
+            },
+            {
+              "variable":"allotmentNumber",
+              "value":{
+                "path":"$.property.AllotmentNumber"
               }
             },
             {

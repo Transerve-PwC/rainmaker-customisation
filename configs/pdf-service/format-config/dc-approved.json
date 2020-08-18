@@ -11,139 +11,256 @@
                         "alignment": "left"
                     },
                     {
-                        "text": "MUNICIPAL CORPORATION CHANDIGARH",
-                        "alignment": "center",
-                        "color": "#17202A",
-                        "fontSize": 12,
-                        "bold": true,
-                        "lineHeight": "2"
+                        "stack": [{
+                                "text": "{{header}}",
+                                "alignment": "center",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{application_for_duplicate_copy}}",
+                                "alignment": "center",
+                                "fontSize": 9,
+                                "italics": true,
+                                "bold": true
+                            },
+                            {
+                                "text": [{
+                                        "text": "{{application_label}}",
+                                        "alignment": "center",
+                                        "color": "#A0A2A4",
+                                        "fontSize": 10,
+                                        "lineHeight": "2",
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "text": "{{applicationNumber}}",
+                                        "alignment": "center",
+                                        "fontSize": 9,
+                                        "lineHeight": "2",
+                                        "bold": true
+                                    }
+                                ]
+                            }
+                        ]
+
                     }
                 ]
 
             },
-            {
-                "columns": [{
-                    "text": "{{application_for_duplicate_copy}}",
-                    "alignment": "center",
-                    "fontSize": 12,
-                    "lineHeight": "2",
-                    "italics": true
-                }]
-            },
-            {
-                "columns": [{
-                        "text": "",
-                        "width": "*"
-                    },
-                    {
-                        "text": "{{application_label}}",
-                        "alignment": "center",
-                        "fontSize": 12,
-                        "lineHeight": "2",
-                        "color": "#6B6E6F",
-                        "width": "auto"
-                    },
-                    {
-                        "text": "{{applicationNumber}}",
-                        "alignment": "center",
-                        "color": "#17202A",
-                        "fontSize": 12,
-                        "lineHeight": "2",
-                        "width": "auto",
-                        "bold": true
-
-                    },
-
-                    {
-                        "text": "",
-                        "width": "*"
-                    }
-
-                ]
-
-            },
 
             {
+                "margin": [0, 20, 10, 10],
                 "style": "table-style",
                 "table": {
                     "widths": ["33.33%", "33.33%", "33.33%"],
-                    "heights": [20, 70, 70, 70, 70, 70],
                     "body": [
                         [{
-                            "colSpan": 3,
-                            "columns": [
-
-                                [{
-                                        "text": "{{feeEstimateLabel}}",
-                                        "fontSize": 12,
-                                        "lineHeight": 2
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{charges_due_label}}",
-                                                "color": "#6B6E6F",
-                                                "fontSize": 8
-                                            },
-                                            {
-                                                "text": "{{aproCharge}}",
-                                                "alignment": "right",
-                                                "color": "#6B6E6F",
-                                                "fontSize": 8
-                                            },
-                                            {
-                                                "text": "{{total_amount_label}}",
-                                                "color": "#6B6E6F",
-                                                "alignment": "center",
-                                                "fontSize": 8
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{publication_charges_label}}",
-                                                "color": "#6B6E6F",
-                                                "lineHeight": 2,
-                                                "fontSize": 8
-                                            },
-                                            {
-                                                "text": "{{feeAmount}}",
-                                                "alignment": "right",
-                                                "color": "#6B6E6F",
-                                                "lineHeight": 2,
-                                                "fontSize": 8
-                                            },
-                                            {
-                                                "text": "Rs {{total}}",
-                                                "alignment": "center",
-                                                "lineHeight": 2,
-                                                "fontSize": 8,
-                                                "bold": true
-                                            }
-                                        ]
-
-                                    },
-                                    {
-                                        "columns": [{
-                                            "text": "___________________________________________________________________________",
-
-                                            "fontSize": 8,
-                                            "bold": true
-                                        }]
-                                    },
-                                    {
-                                        "columns": [{},
-                                            {
-                                                "text": "{{total}}",
-                                                "color": "#6B6E6F",
-                                                "alignment": "right",
-                                                "fontSize": 8,
-                                                "bold": true
-                                            },
-                                            {}
-                                        ]
-                                    }
+                                "colSpan": 3,
+                                "text": "{{feeEstimateLabel}}",
+                                "fontSize": 12,
+                                "lineHeight": 2,
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
                                 ]
+
+                            },
+                            {}, {}
+                        ],
+                        [{
+                            "colSpan": 3,
+
+                            "table": {
+                                "widths": [
+                                    "25%",
+                                    "25%",
+                                    "25%",
+                                    "25%"
+                                ],
+                                "body": [
+                                    [{
+
+                                            "text": "{{charges_due_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{aproCharge}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total_amount_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "{{publication_charges_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{feeAmount}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "Rs {{total}}",
+                                            "alignment": "right",
+                                            "fontSize": 8,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 8,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            },
+                            "border": [
+                                true,
+                                false,
+                                true,
+                                true
                             ]
+
+
                         }, {}, {}],
 
                         [{
@@ -178,7 +295,7 @@
                                                 "bold": true
                                             },
                                             {
-                                                "text": "--",
+                                                "text": "{{allotmentNumber}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 8,
                                                 "bold": true
@@ -407,6 +524,8 @@
                                 ]
                             ]
                         }, {}, {}]
+
+
                     ]
                 }
             }

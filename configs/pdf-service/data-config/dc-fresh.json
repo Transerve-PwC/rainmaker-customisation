@@ -23,6 +23,17 @@
             }
           },
           {
+            "variable": "header",
+            "value": {
+              "path": "PDF_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "RP",
+              "module": "rainmaker-rp"
+            }
+          },
+          {
             "variable": "transit_site",
             "value": {
               "path": "SITE_PLOT_LABEL"
@@ -203,6 +214,12 @@
             "variable": "applicationNumber",
             "value": {
               "path": "$.applicationNumber"
+            }
+          },
+          {
+            "variable":"allotmentNumber",
+            "value":{
+              "path":"$.property.AllotmentNumber"
             }
           },
           {

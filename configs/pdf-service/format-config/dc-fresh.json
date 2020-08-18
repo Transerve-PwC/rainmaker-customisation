@@ -4,66 +4,55 @@
     "defaultStyle": {
       "font": "Cambay"
     },
-    "content": [{
-        "columns": [{
-            "image": "{{logo}}",
-            "width": 40,
-            "alignment": "left"
-          },
-          {
-            "text": "MUNICIPAL CORPORATION CHANDIGARH",
-            "alignment": "center",
-            "color": "#17202A",
-            "fontSize": 12,
-            "bold": true,
-            "lineHeight": "2"
-          }
-        ]
-
-      },
+    "content": [
       {
         "columns": [{
-          "text": "{{application_for_duplicate_copy}}",
-          "alignment": "center",
-          "fontSize": 12,
-          "lineHeight": "2",
-          "italics": true
-        }]
-      },
+          "image": "{{logo}}",
+          "width": 40,
+          "alignment": "left"
+        },
+        {
+          "stack": [{
+              "text": "{{header}}",
+              "alignment": "center",
+              "color": "#17202A",
+              "fontSize": 12,
+              "bold": true
+            },
+            {
+              "text": "{{application_for_duplicate_copy}}",
+              "alignment": "center",
+              "fontSize": 9,
+              "italics": true,
+              "bold":true
+            },
+            {
+              "text": [{
+                  "text": "{{application_label}}",
+                  "alignment": "center",
+                  "color": "#A0A2A4",
+                  "fontSize": 10,
+                  "lineHeight": "2",
+                  "width": "auto"
+                },
+                {
+                  "text": "{{applicationNumber}}",
+                  "alignment": "center",
+                  "fontSize": 9,
+                  "lineHeight": "2",
+                  "bold":true
+                }
+              ]
+            }
+          ]
+
+        }
+      ]
+
+    },
+
       {
-        "columns": [{
-            "text": "",
-            "width": "*"
-          },
-          {
-            "text": "{{application_label}}",
-            "alignment": "center",
-            "color": "#17202A",
-            "fontSize": 12,
-            "lineHeight": "2",
-            "width": "auto"
-          },
-          {
-            "text": "{{applicationNumber}}",
-            "alignment": "center",
-            "color": "#17202A",
-            "fontSize": 12,
-            "lineHeight": "2",
-            "width": "auto",
-            "bold": true
-
-          },
-
-          {
-            "text": "",
-            "width": "*"
-          }
-
-        ]
-
-      },
-
-      {
+        "margin": [0, 20, 10, 10],
         "style": "table-style",
         "table": {
           "widths": ["33.33%", "33.33%", "33.33%"],
@@ -101,7 +90,7 @@
                         "bold": true
                       },
                       {
-                        "text": "--",
+                        "text": "{{allotmentNumber}}",
                         "lineHeight": 2,
                         "fontSize": 8,
                         "bold": true
