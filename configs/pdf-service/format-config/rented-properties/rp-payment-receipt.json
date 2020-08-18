@@ -1,5 +1,5 @@
 {
-    "key": "rp-receipt",
+    "key": "rp-payment-receipt",
     "config": {
         "defaultStyle": {
             "font": "Cambay"

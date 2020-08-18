@@ -1,5 +1,5 @@
 {
-  "key": "rpfreshlicense",
+  "key": "rp-ownership-transfer-paid",
   "config": {
       "defaultStyle": {
           "font": "Cambay"
@@ -30,7 +30,7 @@
                       "style":"receipt-logo-header2"
                     },
                     {
-                      "text": "{{application_label}} {{applicationNo}}",
+                      "text": "{{application_label}} {{applicationNumber}}",
                       "style": "receipt-logo-sub-header"
                     }
                   ],
@@ -98,7 +98,7 @@
                              "style": "receipt-table-value-cont"
                           },
                           {
-                            "text":"{{application_charges}}",
+                            "text":"{{dueAmount}}",
                             "alignment": "right",
                             "border":[
                               false,
@@ -142,7 +142,7 @@
                              "style": "receipt-table-value-cont"
                           },
                           {
-                            "text":"{{publication_charges}}",
+                            "text":"{{aproCharge}}",
                             "alignment": "right",
                             "border":[
                               false,
@@ -335,7 +335,7 @@
                            "style": "receipt-table2"
                         },  
                         {
-                          "text":"{{allotmentNumber}}",
+                          "text":"{{allotmenNumber}}",
                           "border":[
                             false,
                             false,
@@ -528,7 +528,7 @@
                          "style": "receipt-table2"
                       },
                       {
-                        "text":"{{relationship}}",
+                        "text":"{{relation}}",
                         "border":[
                           false,
                           false,
@@ -538,7 +538,7 @@
                          "style": "receipt-table2"
                       },
                       {
-                        "text":"{{mobile}}",
+                        "text":"{{phone}}",
                         "border":[
                           false,
                           false,
@@ -653,13 +653,13 @@
         {
           "stack": [
             {
-              "style": "noc-table2",
-              "table": {
-                "widths": [
-                  "*"
-                ],
-                "body": [
-                  [
+          "style": "noc-table2",
+          "table": {
+            "widths": [
+              "*"
+            ],
+            "body": [
+              [
                     {
                       "text":"{{documents_label}}",
                       "border":[
@@ -670,155 +670,28 @@
                       ],
                        "style": "receipt-table-value"
                     }
-                  ],
-                  [
-                    {
-                      "table": {
-                       "widths":["33.33%", "33.33%", "33.33%", "33.33%"],
-                      "body": [
-                        [
-                        {
-                          "text":"{{form_a_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table-value-cont"
-                        },
-                        {
-                          "text":"{{form_b_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table-value-cont"
-                        },
-                        {
-                          "text":"{{form_c_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table-value-cont"
-                        }
-                      ],
-                      [
-                        {
-                          "text":"{{form_a}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
-                          "text":"{{form_b}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
-                          "text":"{{form_c}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        }
-                      ],
-                      [
-                        {
-                          "text":"{{form_d_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        },
-                        {
-                          "text":"{{form_e_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        },
-                        {
-                          "text":"{{form_f_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        }
-                      ],
-                      [
-                        {
-                          "text":"{{form_d}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
-                          "text":"{{form_e}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
-                          "text":"{{form_f}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        }
-                      ]
-                      ]
-                  },
-                  "border":[
-                      true,
-                      false,
-                      true,
-                      true
+              ],
+              [
+                 {
+                    "table": {
+                     "widths":["25%", "25%", "25%", "25%"],
+                    "body": [
+                     "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
                     ]
-                 }
+                },
+                "border":[
+                    true,
+                    false,
+                    true,
+                    true
                   ]
-                ],
-                "unbreakable": true
-              },
-              "layout": {}
-            }
+               }
+                  ]
+             ],
+             "unbreakable": true
+          },
+          "layout": {}
+        }
           ],
           "unbreakable": true
         }

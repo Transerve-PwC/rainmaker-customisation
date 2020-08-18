@@ -1,5 +1,5 @@
 {
-  "key": "rpfreshlicense",
+  "key": "rp-ownership-transfer-paid",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -36,9 +36,9 @@
                 } 
               },
               {
-                "variable": "applicationNo",
+                "variable": "applicationNumber",
                 "value": {
-                  "path": "$.applicationNumber"
+                  "path": "$.ownerDetails.applicationNumber"
                 }
             },
               {
@@ -108,9 +108,9 @@
     }
 },
 {
-  "variable": "allotmentNumber",
+  "variable": "allotmenNumber",
   "value": {
-    "path": "$.allotmentNumber"
+    "path": "$.allotmenNumber"
   }
 },
 {
@@ -193,19 +193,19 @@
 {
   "variable": "name",
   "value": {
-    "path": "$.rent_holder.name"
+    "path": "$.ownerDetails.name"
   }
 },
 {
-  "variable": "relationship",
+  "variable": "relation",
   "value": {
-    "path": "$.rent_holder.relationship"
+    "path": "$.ownerDetails.relation"
   }
 },
 {
-  "variable": "mobile",
+  "variable": "phone",
   "value": {
-    "path": "$.rent_holder.mobile"
+    "path": "$.ownerDetails.phone"
   }
 },
 {
@@ -235,13 +235,13 @@
 {
   "variable": "email",
   "value": {
-    "path": "$.rent_holder.email"
+    "path": "$.ownerDetails.email"
   }
 },
 {
   "variable": "aadharno",
   "value": {
-    "path": "$.rent_holder.aadharno"
+    "path": "$.ownerDetails.aadharno"
   }
 },
 {
@@ -257,111 +257,9 @@
  }
 },
 {
-  "variable": "form_a_label",
+  "variable": "documents_array",
   "value": {
-    "path": "FORM_A_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_b_label",
-  "value": {
-    "path": "FORM_B_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_c_label",
-  "value": {
-    "path": "FORM_C_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_a",
-  "value": {
-    "path": "$.documents_label.form_a"
-  }
-},
-{
-  "variable": "form_b",
-  "value": {
-    "path": "$.documents_label.form_b"
-  }
-},
-{
-  "variable": "form_c",
-  "value": {
-    "path": "$.documents_label.form_c"
-  }
-},
-{
-  "variable": "form_d_label",
-  "value": {
-    "path": "FORM_D_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_e_label",
-  "value": {
-    "path": "FORM_E_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_f_label",
-  "value": {
-    "path": "FORM_F_LABEL"
-  },
-  "type": "label",
-  "localisation":{
-    "required":true,
-    "prefix": "RP",
-    "module":"rainmaker-tl"
- }
-},
-{
-  "variable": "form_d",
-  "value": {
-    "path": "$.documents_label.form_d"
-  }
-},
-{
-  "variable": "form_e",
-  "value": {
-    "path": "$.documents_label.form_e"
-  }
-},
-{
-  "variable": "form_f",
-  "value": {
-    "path": "$.documents_label.form_f"
+    "path": "$.additionalDetails.documents.*"
   }
 },
 {
@@ -389,9 +287,9 @@
   } 
 },
 {
-  "variable": "application_charges",
+  "variable": "dueAmount",
   "value": {
-    "path": "$.fee_estimate.application_charges"
+    "path": "$.ownerDetails.dueAmount"
   }
 },
 {
@@ -419,9 +317,9 @@
   } 
 },
 {
-  "variable": "publication_charges",
+  "variable": "aproCharge",
   "value": {
-    "path": "$.fee_estimate.publication_charges"
+    "path": "$.ownerDetails.aproCharge"
   }
 },
 {
@@ -451,7 +349,7 @@
 {
   "variable": "fatherhusbandsName",
   "value": {
-    "path": "$.rent_holder.fatherhusbandsName"
+    "path": "$.ownerDetails.fatherhusbandsName"
   }
 }
             ]
@@ -460,7 +358,7 @@
             "derived": [
               {
                 "variable": "sum",
-                "formula": "{{application_charges}}+{{publication_charges}}"
+                "formula": "{{dueAmount}}+{{aproCharge}}"
               }
             ]
           }
