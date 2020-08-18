@@ -1,268 +1,270 @@
 {
-    "key":"rp-mortgage-fresh",
-    "config":{
-      "defaultStyle": {
-        "font": "Cambay"
-       }, 
-    "content":[
-      {
-          "columns":[
-            {
-              "image": "{{logo}}",
-              "width": 40,
-              "alignment":"left"
-            },
-            {
-              "text": "MUNICIPAL CORPORATION CHANDIGARH",
-              "alignment": "center",
-              "color": "#17202A",
-              "fontSize": 12,
-              "bold":true,
-              "lineHeight":"2"
-            }
-          ]
-         
-        },
-        {
-          "columns":[      
-            {
-              "text": "{{application_for_mortgage}}",
-              "alignment": "center",
-              "fontSize": 12,         
-              "lineHeight":"2",
-              "italics":true            
-            }         
-          ]        
-        },
-        {
-          "columns":[
-            {
-              "text":"",
-              "width":"*"
-            },
-            {      
-                "text": "{{application_label}}",
+  "key": "rp-mortgage-fresh",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "content": [{
+        "columns": [{
+            "image": "{{logo}}",
+            "width": 40,
+            "alignment": "left"
+          },
+          {
+            "stack": [{
+                "text": "{{header}}",
                 "alignment": "center",
                 "color": "#17202A",
                 "fontSize": 12,
-                "lineHeight":"2",
-                "width":"auto"
-               },
-               {
-                "text": "{{applicationNo}}",
+                "bold": true
+              },
+              {
+                "text": "{{application_for_mortgage}}",
                 "alignment": "center",
-                "color": "#17202A",
-                "fontSize": 12,
-                "lineHeight":"2",
-                "width":"auto",
+                "fontSize": 9,
+                "italics": true,
                 "bold":true
+              },
+              {
+                "text": [{
+                    "text": "{{application_label}}",
+                    "alignment": "center",
+                    "color": "#A0A2A4",
+                    "fontSize": 10,
+                    "lineHeight": "2",
+                    "width": "auto"
+                  },
+                  {
+                    "text": "{{applicationNo}}",
+                    "alignment": "center",
+                    "fontSize": 9,
+                    "lineHeight": "2",
+                    "bold":true
+                  }
+                ]
+              }
+            ]
 
-               },
-                
-            {
-              "text":"",
-              "width":"*"
-            }
-             
-          ]
-         
-        },
-        
-     {
-      "style":"table-style",
-      "table": {
-        "widths": ["33.33%", "33.33%", "33.33%"],
-        "heights": [20, 70, 70,70,70],
-				"body": [
-          [{
-            "colSpan": 3,
-            "columns": [
-              
-              [
-                {
-                  "text":"{{property}}",
-                  "fontSize": 12,
-                  "lineHeight": 2
-                },
-                {
-                  "columns": [
-                    { "text":"{{transit_site}}",
-                      "lineHeight": 2,
-
-                      "fontSize": 8 },
-                    { "text":"{{allotment_number}}",
-                      "lineHeight": 2,
-                      "fontSize": 8 },
-                    { "text": "{{area_label}} ",
-                      "lineHeight": 2,
-                      "fontSize": 8 }
-                  ]
-                },
-                {
-                    "columns": [
-                      { "text":"{{transitNumber}}",
-                        "lineHeight": 2,
-                        "fontSize": 8, 
-                      "bold":true},
-                      { "text":"{{allotmentNumber}}",
-                        "lineHeight": 2,
-                        "fontSize": 8, 
-                        "bold":true
-                       },
-                      { "text": "{{area}}",
-                        "lineHeight": 2,
-                        "fontSize": 8, 
-                        "bold":true }
-                    ]
-                
-                },
-                {
-                  "columns": [
-                    { "text":"{{pincode_label}}",
-                      "fontSize": 8 }
-                  ]   
-                },
-                {
-                  "columns": [
-                    { "text":"{{pincode}}",
-                      "fontSize": 8,
-                      "bold":true  }
-                  ]   
-                }
-              ]
-            ]
-          },{},{}],
-          [{
-            "colSpan": 3,
-            "columns": [
-              
-              [
-                {
-                  "text":"{{applicantDetails}}",
-                  "fontSize": 12
-                },
-                {
-                  "columns": [
-                    { "text":"{{APPLICANT_NAME_LABEL}}",
-                      "fontSize": 8 },
-                    { "text":"{{father_husband_name_label}}",
-                      "fontSize": 8 },
-                    { "text": "{{relationship_label}} ",
-                      "fontSize": 8 },
-                    {"text":"{{MOBILE_NO_LABEL}}",
-                      "fontSize": 8}
-                  ]
-                },
-                {
-                    "columns": [
-                      { "text":"{{name}}",
-                        "fontSize": 8, 
-                        "bold":true },
-                      { "text":"{{fatherhusbandsName}}",
-                        "fontSize": 8, 
-                        "bold":true },
-                      { "text": "{{relationship}} " ,
-                        "fontSize": 8, 
-                        "bold":true},
-                      {"text":"{{mobile}}",
-                        "fontSize": 8, 
-                        "bold":true}
-                    ]
-                
-                },
-                {
-                  "columns": [
-                    { "text":"{{email_label}} " ,
-                      "fontSize": 8},
-                    {"text":"{{aadharno_label}}",
-                      "fontSize": 8}
-                  ]   
-                },
-                {
-                  "columns": [
-                    { "text":"{{email}}" ,
-                      "fontSize": 8, 
-                      "bold":true},
-                    { "text":"{{aadharno}}" ,
-                      "fontSize": 8, 
-                      "bold":true}
-                  ]   
-                }
-              ]
-            ]
-          },{},{}],
-          [{
-            "colSpan": 3,
-            "columns": [
-              
-              [
-                {
-                  "text":"{{documents_label}}",
-                  "fontSize": 12
-                },
-                {
-                  "columns": [
-                    { "text":"{{ form_b_label }}" ,
-                      "fontSize": 8},
-                    { "text":"{{form_c_label}}" ,
-                      "fontSize": 8},
-                    { "text": "{{form_a_label}}" ,
-                      "fontSize": 8}
-                  ]
-                },
-                {
-                    "columns": [
-                      { "text":"{{form_a}} ",
-                        "fontSize": 8, 
-                        "bold":true },
-                      { "text":"{{form_b}} " ,
-                        "fontSize": 8, 
-                        "bold":true},
-                      { "text":"{{form_c}}" ,
-                        "fontSize": 8, 
-                        "bold":true}
-                      
-                    ]
-                
-                },
-                {
-                  "columns": [
-                    { "text":"{{form_d_label}}" ,
-                      "fontSize": 8},
-                    { "text":"{{form_e_label}}" ,
-                      "fontSize": 8},
-                    { "text": "{{form_f_label}}" ,
-                      "fontSize": 8}
-                  ]
-                },
-                {
-                    "columns": [
-                      { "text":"{{form_d}}" ,
-                        "fontSize": 8, 
-                        "bold":true},
-                      { "text":"{{form_e}}" ,
-                        "fontSize": 8, 
-                        "bold":true},
-                      { "text":"form_f",
-                        "fontSize": 8, 
-                        "bold":true}
-                    ]
-                
-                }
-              ]
-            ]
-          },{},{}]
+          }
         ]
-			}
-     }
-      ],
+
+      },
+
+      {
+        "margin": [0, 20, 10, 10],
+        "style": "table-style",
+        "table": {
+          "widths": ["33.33%", "33.33%", "33.33%"],
+          "heights": [20, 60, 60, 60, 60],
+          "body": [
+            [{
+              "colSpan": 3,
+              "columns": [
+
+                [{
+                    "text": "{{property}}",
+                    "fontSize": 10,
+                    "lineHeight": 2
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{transit_site}}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{allotment_number}}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{area_label}} ",
+                        "fontSize": 8
+                      }
+                    ]
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{transitNumber}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{allotmentNumber}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{area}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      }
+                    ]
+
+                  },
+                  {
+                    "columns": [{
+                      "text": "{{pincode_label}}",
+                      "fontSize": 8
+                    }]
+                  },
+                  {
+                    "columns": [{
+                      "text": "{{pincode}}",
+                      "fontSize": 8,
+                      "bold": true
+                    }]
+                  }
+                ]
+              ]
+            }, {}, {}],
+            [{
+              "colSpan": 3,
+              "columns": [
+
+                [{
+                    "text": "{{applicantDetails}}",
+                    "fontSize": 10,
+                    "lineHeight": "2"
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{name_label}}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{father_husband_name_label}}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{relationship_label}} ",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{mobile_no}}",
+                        "fontSize": 8
+                      }
+                    ]
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{name}}",
+                        "fontSize": 8,
+                        "lineHeight": 2,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{guardian}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{relationship}} ",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{mobile}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      }
+                    ]
+
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{email_label}} ",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{aadharno_label}}",
+                        "fontSize": 8
+                      }
+                    ]
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{email}}",
+                        "fontSize": 8,
+                        "lineHeight": 2,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{aadharno}}",
+                        "fontSize": 8,
+                        "lineHeight": 2,
+                        "bold": true
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }, {}, {}],
+            [{
+              "colSpan": 3,
+              "columns": [
+
+                [{
+                    "text": "{{documents_label}}",
+                    "lineHeight": 2,
+                    "fontSize": 10
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{ form_a_label }}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{form_b_label}}",
+                        "fontSize": 8
+                      },
+                      {
+                        "text": "{{form_c_label}}",
+                        "fontSize": 8
+                      }
+                    ]
+                  },
+                  {
+                    "columns": [{
+                        "text": "{{form_a_value}} ",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{form_b_value}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      },
+                      {
+                        "text": "{{form_c_value}}",
+                        "lineHeight": 2,
+                        "fontSize": 8,
+                        "bold": true
+                      }
+
+                    ]
+
+                  }
+                ]
+              ]
+            }, {}, {}]
+          ]
+        }
+      }
+    ],
     "styles": {
       "tableExample": {
         "margin": [0, 5, 0, 15],
-        "width":["100%"]
+        "width": ["100%"]
       },
-      "table-style":{
-        "lineHeight":"2"
+      "table-style": {
+        "lineHeight": "2"
       },
       "pt-reciept-citizen-subheader": {
         "fontSize": 10,
@@ -335,5 +337,5 @@
         ]
       }
     }
-    }
   }
+}
