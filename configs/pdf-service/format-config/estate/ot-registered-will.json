@@ -1,0 +1,241 @@
+{
+    "key": "ot-registered-will",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "BEFORE SHRI ______________________________",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "ADDITIONAL COMMISSIONER,",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{header}}",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "auto",
+                        "text": "Transfer of ownership of share of SCO/SCF/Booth/Residential Site No. Situated in ____________ Chandigarh on the basis of Registered Will of Late Shri/Smt",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "border":"2",
+                        "image": "{{logo}}",
+                        "alignment": "right",
+                        "width": "50"
+
+                    }
+                ]
+            },
+            {
+                "text":"*****",
+                 "alignment":"center",
+                 "margin":[0,20,0,0]
+            },
+            {
+                "text":"It Is notified for the information of general public and all concerned that as per record of this office ",
+                "margin":[50,20,0,0],
+                "style": "pdfContent"
+            },
+            {
+
+                "style": "pdfContent",
+                "margin":[0,0,0,0],
+                "text":[
+                {
+                    "text": ""
+                },{
+                    "text":"Wo share of the SCO/SCF/Booth/Residential Site No. situated in"
+                },
+                {
+                    "text":"--------",
+                    "bold":true
+                },
+                {
+                    "text":"Chandigarh stands in the name of Shri/Smt"
+                },
+                {
+                    "text":"--------",
+                    "bold":true
+                }
+               
+            ]
+               
+            },
+            {
+                "style":"pdfContent",
+                "text":[
+                    { 
+                        "text":"It has been reported by Smt/Shri"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"r/o"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                  
+                    {
+                        "text":"Chandigarh that Shri/Smt expired on leaving behind "
+                    }
+                ],
+               
+                "margin":[50,0,0,0]
+            },
+            {
+                "margin":[0,0,0,0],
+                "style":"pdfContent",
+                "text":"a Registered Will dated"
+            },
+            {
+                "style":"pdfContent",
+                "margin":[50,0,0,0],
+                "text":[
+                    {
+                        "text":"Now,"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"r/o"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"has applied for the transfer of ownership rights to the extent of % share of the "
+                    }
+                    
+                ]
+            },
+            {
+                "margin":[0,0,0,0],
+                "style":"pdfContent",
+                "text":[
+                    
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"SCO/SCF/Booth/Residential Site No. situated in Chandigarh held by Late Shri/Smt"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"in her favour on the basis of 62-registered Will of Late Shri/Smt duly registered with the office of Sub Registrar, UT, Chandigarh at S.No. Book No"
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"Vol No. "
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"Page No."
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"Dated "
+                    },
+                    {
+                        "text":"--------",
+                        "bold":true
+                    },
+                    {
+                        "text":"If anybody has got any objection upon the mutation of the said share in the said property, in favour of the above named applicant, he/she/they may furnish the same in writing in the office of the undersigned in his office Room Floor, New Deluxe Building, Municipal Corporation, Sector 17, Chandigarh within 30 days from the date of publication of this notice, failing which the ownership of the said property will be transferred accordingly and no further claim whatsoever shall be entertained at any later stage."
+                    }
+                ]
+            },
+           
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "ADDL. COMMISSIONER,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "CHANDIGARH.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "text":"Note: Read carefully before publication.",
+                "style":"pdfContent"
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}
