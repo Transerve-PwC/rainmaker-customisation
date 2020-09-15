@@ -37,65 +37,6 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
-              },
-              {
-                "variable": "name",
-                "value": {
-                  "path": "$.applicant[0].name"
-                }
-
-              },
-              {
-                "variable":"colony",
-                "value":{
-                  "path":"$.property.colony"
-                },
-                "localisation": {
-                  "required": true,
-                  "module": "rainmaker-tl"
-                }
-              },
-              {
-                "variable":"area",
-                "value":{
-                  "path":"$.property.area"
-                }
-              },
-              {
-                "variable":"pincode",
-                "value":{
-                  "path":"$.property.pincode"
-                }
-              },
-              {
-                "variable":"memoNumber",
-                "value":{
-                  "path":"$.memoNumber"
-                }
-              },
-              {
-                "variable":"transitNumber",
-                "value":{
-                  "path":"$.property.transitNumber"
-                }
-              },
-              {
-                "variable":"creationDate",
-                "value":{
-                  "path":"$.auditDetails.createdTime"
-                }
-              },
-              {
-                "variable":"allotmentNumber",
-                "value":{
-                  "path":"$.property.AllotmentNumber"
-                }
-              },
-              {
-                "variable":"allotmentDate",
-                "value":{
-                  "path":"$.property.allotmentDate"
-                }
               }
 
             ]
