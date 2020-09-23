@@ -3,7 +3,7 @@
     "DataConfigs": {
       "serviceName": "rainmaker-rp",
       "version": "1.0.0",
-      "baseKeyPath": "$.DuplicateCopyApplications.*",
+      "baseKeyPath": "$.Applications.*",
       "entityIdPath": "$.applicationNumber",
       "isCommonTableBorderRequired": true,
       "mappings": [{
@@ -18,7 +18,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
               {
@@ -30,6 +30,24 @@
                 "localisation": {
                   "prefix": "RP",
                   "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable":"transfereeName",
+                "value":{
+                  "path":"$.applicationDetails.transferee.name"
+                }
+              },
+              {
+                "variable":"transfereeAddress",
+                "value":{
+                  "path":"$.applicationDetails.transferee.address"
+                }
+              },
+              {
+                "variable":"transfereeSharePercent",
+                "value":{
+                  "path":"$.applicationDetails.transferee.percentageOfShareTransferred"
                 }
               },
 
