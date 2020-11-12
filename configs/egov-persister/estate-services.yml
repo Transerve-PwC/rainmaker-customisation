@@ -570,7 +570,7 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.auditDetails.lastModifiedTime
 
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.demandDate
+            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.generationDate
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.isPrevious
 
@@ -694,7 +694,7 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.transactionNumber
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.dateOfPayment
-            
+
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.demandId
@@ -706,7 +706,7 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.transactionNumber
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.dateOfPayment
-            
+
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
 
 
@@ -889,7 +889,7 @@ serviceMaps:
             - jsonPath: $.PropertyPenalties.*.violationType
 
             - jsonPath: $.PropertyPenalties.*.isPaid
-            
+
             - jsonPath: $.PropertyPenalties.*.generationDate
 
             - jsonPath: $.PropertyPenalties.*.remainingPenaltyDue
@@ -902,8 +902,8 @@ serviceMaps:
 
             - jsonPath: $.PropertyPenalties.*.auditDetails.createdTime
 
-            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime   
-                     
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime
+
     - version: 1.0
       description: Update Property Penalty details in cs_ep_property_penalty_v1 table
       fromTopic: update-penalty-topic
@@ -914,14 +914,14 @@ serviceMaps:
           jsonMaps:
 
             - jsonPath: $.PropertyPenalties.*.isPaid
-            
+
             - jsonPath: $.PropertyPenalties.*.remainingPenaltyDue
 
             - jsonPath: $.PropertyPenalties.*.status
 
             - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedBy
 
-            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime  
-            
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime
+
             - jsonPath: $.PropertyPenalties.*.id
-             
+

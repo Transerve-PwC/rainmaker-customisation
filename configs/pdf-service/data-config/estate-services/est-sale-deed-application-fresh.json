@@ -1,7 +1,7 @@
 {
     "key": "est-sale-deed-application-fresh",
     "DataConfigs": {
-        "serviceName": "rainmaker-rp",
+        "serviceName": "rainmaker-es",
         "version": "1.0.0",
         "baseKeyPath": "$.Applications.*",
         "entityIdPath": "$.applicationNumber",
@@ -419,7 +419,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
@@ -439,9 +443,11 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
-                       
-
                     },
                     {
                         "variable": "lastNocDateValue",
