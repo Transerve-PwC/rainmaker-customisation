@@ -229,6 +229,229 @@
                 }
             },
             {
+              "style": "noc-table2",
+              "table": {
+                "widths": [
+                  "*"
+                ],
+                "body": [
+                  [
+                    {
+                      "text":"{{payableAmount}}",
+                      "border":[
+                        true,
+                        true,
+                        true,
+                        false
+                      ],
+                       "style": "receipt-table-value"
+                    }
+                  ],
+                  [
+                    {
+                      "table": {
+                        "widths": [
+                          "25%",
+                          "25%",
+                          "25%",
+                          "25%"
+                           ],
+                           "body": [
+                            [
+                              {
+                                "text":"{{ES_TOTALSECURITYDEPOSIT}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "color": "#484848",
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"1000.00",
+                                "color": "#484848",
+                                "alignment": "right",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"Total Due",
+                                "alignment": "right",
+                                "color": "#484848",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                            ],
+                            [
+                              {
+                                "color": "#484848",
+                                "text":"{{TOTALSECURITYDEPOSITPAID}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "color": "#484848",
+                                "text":"500.00",
+                                "alignment": "right",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"Rs 500.00",
+                                "alignment": "right",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              }
+                            ],
+                            [
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  true,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  true,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  true,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                            ],
+                            [
+                              {
+                                "text":"Total Due",
+                                "color": "#484848",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "color": "#484848",
+                                "text":"500.00",
+                                "alignment": "right",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                            ]
+                           ]
+                      },
+                      "border":[
+                        true,
+                        false,
+                        true,
+                        true
+                      ]
+                    }
+                  ]
+                ]
+              },
+              "layout": {}
+             },
+            {
                 "text":"{{paymentInformation}}",
                 "style":"pt-reciept-citizen-subheader",
                 "alignment":"left",
@@ -416,6 +639,16 @@
             "receipt-no": {
               "color": "#484848",
               "fontSize": 10
+            },
+            "noc-table2": {
+              "fontSize": 12,
+              "color": "#484848",
+              "margin": [
+                -25,
+                10,
+                -25,
+                -8
+              ]
             }
            }
     }

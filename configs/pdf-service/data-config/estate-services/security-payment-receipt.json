@@ -190,7 +190,7 @@
                                "prefix":"ES",   
                                "module":"rainmaker-es"
                             } 
-                          },
+                        },
                           {
                             "variable": "ES_TOTALSECURITYDEPOSIT",
                             "value": {
