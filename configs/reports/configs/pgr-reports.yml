@@ -37,15 +37,15 @@ ReportDefinitions:
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.PgrDepartment
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_def_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.Sector
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_sector
   sourceColumns:
@@ -162,7 +162,7 @@ ReportDefinitions:
     description, 
     case when source = 'mobileapp' then 'Citizen Mobile App' when source = 'web' then 'Citizen Web App' when source = 'ivr' then 'Customer Service Desk' else 'Customer Service Desk' end as source,
     createuser.name as complaintraisedby,
-    (select (CASE WHEN status in('resolved','rejected','closed') or slaendtime is null then '' ELSE (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining')END) END)) as slaHours,
+    (select (CASE WHEN status in('resolved','rejected','closed')  then '' ELSE (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining')END) END)) as slaHours,
     to_char(to_timestamp(TRUNC(CAST(eg_pgr_service.lastmodifiedtime AS bigint) / 1000)), 'DD/MM/YYYY') AS lastactiondate,
     Initcap(status) as status,
     (CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username='CRONJOB') is not null then 'Y' else '' end)  as autoescalated
@@ -234,11 +234,11 @@ ReportDefinitions:
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.Sector
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_sector
   sourceColumns:
@@ -340,11 +340,11 @@ ReportDefinitions:
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.Sector
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_sector
   sourceColumns:
@@ -479,7 +479,7 @@ ReportDefinitions:
     
   orderby: ORDER BY createdtime asc
 
-- reportName: StateULBReport
+- reportName: ULBEmployeeWiseReport
   summary: Fetches complaints stats for all ULBs in state
   version: 1.0.0
   moduleName: rainmaker-pgr
@@ -555,11 +555,6 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: false
-  - name: category
-    label: reports.rainmaker-pgr.category
-    type: string
-    source: eg_pgr_service
-    total: false
   - name: complainttype
     label: reports.rainmaker-pgr.complainttype
     type: string
@@ -622,7 +617,6 @@ ReportDefinitions:
     select 
     initcap(split_part(a.tenantid, '.', 2)) as tenantid, 
     b.message as department,
-    regexp_replace(category, '([a-z])([A-Z])', '\1 \2','g') as category,
     regexp_replace(servicecode, '([a-z])([A-Z])', '\1 \2','g') as complainttype,
     SUM(CASE WHEN status ='open' THEN 1 ELSE 0 END) as open,
     SUM(CASE WHEN status ='assigned' THEN 1 ELSE 0 END) as assigned,
@@ -635,20 +629,20 @@ ReportDefinitions:
     from eg_pgr_service a
     left join message b on (b.code = UPPER(CONCAT('PGRDEPT.',substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),1,3)||'_'||substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),4,10))) and b.locale='en_IN')
     WHERE a.tenantid != 'ch.testing'
-  groupby: GROUP BY a.tenantid,a.category,a.servicecode,b.message
-  orderby: ORDER BY a.tenantid,a.category,a.servicecode,b.message
+  groupby: GROUP BY a.tenantid,a.servicecode,b.message
+  orderby: ORDER BY a.tenantid,a.servicecode,b.message
 
-- reportName: DepartmentReport1
+- reportName: ULBDepartmentReport
   summary: Fetches complaint stats based on complaint types for a ULB
   version: 1.0.0
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.PgrDepartment
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_def_dept
   sourceColumns:    
@@ -691,7 +685,7 @@ ReportDefinitions:
   - name: ulb
     label: ULB
     type: singlevaluelist
-    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=$tenantid&moduleName=tenant&masterName=tenants|$.MdmsRes.tenant.tenants.*.code|$.MdmsRes.tenant.tenants.*.name
+    pattern: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?tenantId=$tenantid&moduleName=tenant&masterName=tenants|$.MdmsRes.tenant.tenants.*.code|$.MdmsRes.tenant.tenants.*.name
     source: pt
     wrapper: true
     isMandatory: false
@@ -731,11 +725,11 @@ ReportDefinitions:
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.PgrDepartment
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_def_dept
   sourceColumns:    
