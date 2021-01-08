@@ -549,6 +549,15 @@ ReportDefinitions:
   summary: Fetches complaint stats based on complaint types for a ULB
   version: 1.0.0
   moduleName: rainmaker-pgr
+  externalService:
+  - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    keyOrder: serviceCode,department,slaHours
+    tableName: tbl_dept
+  - entity: $.MdmsRes.RAINMAKER-PGR.PgrDepartment
+    apiURL: http://egov-mdms-service:8094/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=PgrDepartment&tenantId=$tenantId
+    keyOrder: name,code
+    tableName: tbl_def_dept
   sourceColumns:
   - name: department
     label: reports.rainmaker-pgr.department
@@ -616,7 +625,7 @@ ReportDefinitions:
   query: |
     select 
     initcap(split_part(a.tenantid, '.', 2)) as tenantid, 
-    b.message as department,
+    (SELECT deptmap_def.name FROM (VALUES tbl_def_dept) AS deptmap_def(name,code) INNER JOIN (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) on deptmap.serviceCode = a.servicecode and deptmap_def.code = deptmap.department) AS department,
     regexp_replace(servicecode, '([a-z])([A-Z])', '\1 \2','g') as complainttype,
     SUM(CASE WHEN status ='open' THEN 1 ELSE 0 END) as open,
     SUM(CASE WHEN status ='assigned' THEN 1 ELSE 0 END) as assigned,
@@ -627,10 +636,9 @@ ReportDefinitions:
     SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=a.lastmodifiedby and eg_user.username !='CRONJOB' and a.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as reopened,
     count(status) as total 
     from eg_pgr_service a
-    left join message b on (b.code = UPPER(CONCAT('PGRDEPT.',substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),1,3)||'_'||substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),4,10))) and b.locale='en_IN')
     WHERE a.tenantid != 'ch.testing'
-  groupby: GROUP BY a.tenantid,a.servicecode,b.message
-  orderby: ORDER BY a.tenantid,a.servicecode,b.message
+  groupby: GROUP BY a.tenantid,a.servicecode,department
+  orderby: ORDER BY a.tenantid,a.servicecode,department
 
 - reportName: ULBDepartmentReport
   summary: Fetches complaint stats based on complaint types for a ULB
